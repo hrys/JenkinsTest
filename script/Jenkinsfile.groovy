@@ -12,7 +12,9 @@ pipeline {
                 environment name: 'Example01', value: 'true'
             }
             steps {
-                echo 'Example01'
+                @Library('TestLib') import lib.Util
+                def util = new Util(this)
+                util.Example01()
             }
         }
         
@@ -21,7 +23,9 @@ pipeline {
                 environment name: 'Example02', value: 'true'
             }
             steps {
-                echo 'Example02'
+                @Library('TestLib') import lib.Util
+                def util = new Util(this);
+                util.Example02()
             }
         }
     }
