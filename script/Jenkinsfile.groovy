@@ -1,3 +1,5 @@
+@Library('TestLib') _
+
 pipeline {
     agent any
 
@@ -12,9 +14,10 @@ pipeline {
                 environment name: 'Example01', value: 'true'
             }
             steps {
-                @Library('TestLib') import lib.Util
+                @Library('TestLib') import lib.bar
                 def util = new Util(this)
                 util.Example01()
+                Example01_vars()
             }
         }
         
@@ -23,9 +26,10 @@ pipeline {
                 environment name: 'Example02', value: 'true'
             }
             steps {
-                @Library('TestLib') import lib.Util
+                @Library('TestLib') import lib.bar
                 def util = new Util(this);
                 util.Example02()
+                Example02_vars()
             }
         }
     }
