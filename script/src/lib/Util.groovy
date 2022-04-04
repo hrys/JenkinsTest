@@ -3,7 +3,7 @@ package lib;
 class Util {
     def steps
 
-    Util() {
+    Util(steps) {
         this.steps = steps
     }
 
