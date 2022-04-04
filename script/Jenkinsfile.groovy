@@ -17,7 +17,7 @@ pipeline {
                 // @Library('TestLib') import lib.bar
                 // def util = new Util(this)
                 // util.Example01()
-                Example01_vars()
+                foo.Example01_vars()
             }
         }
         
@@ -29,7 +29,7 @@ pipeline {
                 // @Library('TestLib') import lib.bar
                 // def util = new Util(this);
                 // util.Example02()
-                Example02_vars()
+                foo.Example02_vars()
             }
         }
     }
