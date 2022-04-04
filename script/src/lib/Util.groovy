@@ -1,5 +1,3 @@
-package lib
-
 class Util {
     def steps
 
