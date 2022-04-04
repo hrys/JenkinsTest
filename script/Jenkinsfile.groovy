@@ -14,10 +14,11 @@ pipeline {
                 environment name: 'Example01', value: 'true'
             }
             steps {
-                // @Library('TestLib') import lib.bar
-                // def util = new Util(this)
-                // util.Example01()
-                script {
+                script{
+                    def TestLib = library 'TestLib'
+                    def util = TestLib.lib.Util.new(this)
+                    util.Example01()
+                
                     foo.Example01_vars()
                 }
             }
@@ -28,10 +29,11 @@ pipeline {
                 environment name: 'Example02', value: 'true'
             }
             steps {
-                // @Library('TestLib') import lib.bar
-                // def util = new Util(this);
-                // util.Example02()
-                script {
+                script{
+                    def TestLib = library 'TestLib'
+                    def util = TestLib.lib.Util.new(this)
+                    util.Example02()
+                
                     foo.Example02_vars()
                 }
             }
