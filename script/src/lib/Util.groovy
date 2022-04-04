@@ -1,19 +1,19 @@
 package lib;
 
 class Util {
-    def steps
+    //def steps
 
-    Util(steps) {
-        this.steps = steps
+    Util() {
+        //this.steps = steps
     }
 
     def Example01() {
-        this.steps.echo "Example01"
+        //this.steps.echo "Example01"
         echo "ex01"
     }
     
     def Example02() {
-        this.steps.echo "Example02"
+        //this.steps.echo "Example02"
         echo "ex02"
     }
 }
